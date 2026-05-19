@@ -6,18 +6,18 @@ const prebuiltPCs = [
 ];
 
 const pcParts = [
-    { id: 'cpu1', category: 'CPU', name: 'AMD Ryzen 7 7800X3D', price: 399.99, specs: '8 Cores, 16 Threads, 5.0 GHz Max Boost', image: 'images/cpu.png' },
-    { id: 'cpu2', category: 'CPU', name: 'Intel Core i7-13700K', price: 409.99, specs: '16 Cores, 24 Threads, 5.4 GHz Max Boost', image: 'images/cpu.png' },
-    { id: 'gpu1', category: 'GPU', name: 'NVIDIA GeForce RTX 4080 Super', price: 999.99, specs: '16GB GDDR6X, 2550 MHz Core Clock', image: 'images/gpu.png' },
-    { id: 'gpu2', category: 'GPU', name: 'AMD Radeon RX 7900 XTX', price: 949.99, specs: '24GB GDDR6, 2500 MHz Core Clock', image: 'images/gpu.png' },
-    { id: 'mobo1', category: 'Motherboard', name: 'ASUS ROG Strix B650E-F', price: 259.99, specs: 'AM5 Socket, ATX, PCIe 5.0', image: 'images/mobo.png' },
-    { id: 'mobo2', category: 'Motherboard', name: 'MSI MAG Z790 Tomahawk', price: 239.99, specs: 'LGA 1700 Socket, ATX, DDR5', image: 'images/mobo.png' },
-    { id: 'ram1', category: 'RAM', name: 'HyperX Predator DDR4 32GB', price: 119.99, specs: 'DDR4-3200, CL16, 4x8GB', image: 'images/ram.png' },
-    { id: 'ram2', category: 'RAM', name: 'G.Skill Trident Z5 Neo 64GB', price: 214.99, specs: 'DDR5-6000, CL30, 2x32GB', image: 'images/ram.png' },
-    { id: 'psu1', category: 'PSU', name: 'Thermaltake Smart 500W', price: 49.99, specs: '500W, 80+ White, Non-Modular', image: 'images/psu.png' },
-    { id: 'psu2', category: 'PSU', name: 'SeaSonic FOCUS GX-1000', price: 169.99, specs: '1000W, 80+ Gold, Fully Modular', image: 'images/psu.png' },
-    { id: 'case1', category: 'Case', name: 'Fractal Design North', price: 139.99, specs: 'Mid Tower, ATX, Wood Front Panel', image: 'images/case.jpg' },
-    { id: 'case2', category: 'Case', name: 'Lian Li O11 Dynamic EVO', price: 159.99, specs: 'Mid Tower, ATX, Dual Chamber', image: 'images/case.jpg' }
+    { id: 'cpu1', category: 'CPU', name: 'AMD Ryzen 7 7800X3D', price: 399.99, specs: '8 Cores, 16 Threads, 5.0 GHz Max Boost', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80' },
+    { id: 'cpu2', category: 'CPU', name: 'Intel Core i7-13700K', price: 409.99, specs: '16 Cores, 24 Threads, 5.4 GHz Max Boost', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80' },
+    { id: 'gpu1', category: 'GPU', name: 'NVIDIA GeForce RTX 4080 Super', price: 999.99, specs: '16GB GDDR6X, 2550 MHz Core Clock', image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80' },
+    { id: 'gpu2', category: 'GPU', name: 'AMD Radeon RX 7900 XTX', price: 949.99, specs: '24GB GDDR6, 2500 MHz Core Clock', image: 'https://images.unsplash.com/photo-1532759722434-1e0d0d0cb158?auto=format&fit=crop&w=800&q=80' },
+    { id: 'mobo1', category: 'Motherboard', name: 'ASUS ROG Strix B650E-F', price: 259.99, specs: 'AM5 Socket, ATX, PCIe 5.0', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80' },
+    { id: 'mobo2', category: 'Motherboard', name: 'MSI MAG Z790 Tomahawk', price: 239.99, specs: 'LGA 1700 Socket, ATX, DDR5', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80' },
+    { id: 'ram1', category: 'RAM', name: 'HyperX Predator DDR4 32GB', price: 119.99, specs: 'DDR4-3200, CL16, 4x8GB', image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=800&q=80' },
+    { id: 'ram2', category: 'RAM', name: 'G.Skill Trident Z5 Neo 64GB', price: 214.99, specs: 'DDR5-6000, CL30, 2x32GB', image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=800&q=80' },
+    { id: 'psu1', category: 'PSU', name: 'Thermaltake Smart 500W', price: 49.99, specs: '500W, 80+ White, Non-Modular', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80' },
+    { id: 'psu2', category: 'PSU', name: 'SeaSonic FOCUS GX-1000', price: 169.99, specs: '1000W, 80+ Gold, Fully Modular', image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80' },
+    { id: 'case1', category: 'Case', name: 'Fractal Design North', price: 139.99, specs: 'Mid Tower, ATX, Wood Front Panel', image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80' },
+    { id: 'case2', category: 'Case', name: 'Lian Li O11 Dynamic EVO', price: 159.99, specs: 'Mid Tower, ATX, Dual Chamber', image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80' }
 ];
 
 const recommendations = [
@@ -76,7 +76,7 @@ function renderHome() {
     const grid = document.getElementById('featured-grid');
     grid.innerHTML = prebuiltPCs.map(pc => `
         <div class="card animate-in">
-            <div class="card-img-wrapper"><img src="${pc.image}" alt="${pc.name}" class="card-img"></div>
+            <div class="card-img-wrapper"><img src="${pc.image}" alt="${pc.name}" class="card-img" loading="lazy"></div>
             <div class="card-header">
                 <div><span class="badge">${pc.type}</span><h3 style="margin-top:0.5rem">${pc.name}</h3></div>
                 <span class="card-price">$${pc.price}</span>
@@ -136,7 +136,7 @@ function renderParts() {
         ? '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted)">No components found matching your criteria.</div>'
         : filtered.map(p => `
         <div class="card part-card animate-in">
-            ${p.image ? `<div class="part-card-img-wrap"><img src="${p.image}" alt="${p.name}"></div>` : ''}
+            ${p.image ? `<div class="part-card-img-wrap"><img src="${p.image}" alt="${p.name}" loading="lazy"></div>` : ''}
             <span class="badge" style="align-self:flex-start;margin-bottom:0.75rem">${p.category}</span>
             <h4>${p.name}</h4>
             <p class="specs">${p.specs}</p>
@@ -170,7 +170,7 @@ function renderBuilder() {
         <div class="builder-slot ${part ? 'filled' : ''}">
             <div class="slot-left">
                 <div class="slot-icon">
-                    ${part && part.image ? `<img src="${part.image}" alt="${part.name}">` : icons.cpu}
+                    ${part && part.image ? `<img src="${part.image}" alt="${part.name}" loading="lazy">` : icons.cpu}
                 </div>
                 <div>
                     <div class="slot-category">${slot}</div>
