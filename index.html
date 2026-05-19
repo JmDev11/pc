@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PC-Craft — Build your dream custom PC or shop premium pre-built systems. Modern PC builder with real-time pricing.">
+    <title>PC-Craft | Craft Your Ultimate Dream Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234f7df3' stroke-width='2'><rect x='4' y='4' width='16' height='16' rx='2'/><rect x='9' y='9' width='6' height='6'/></svg>">
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand" onclick="navigateTo('home');return false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2">
+                    <defs>
+                        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4f7df3" />
+                            <stop offset="100%" stop-color="#8b5cf6" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <rect x="9" y="9" width="6" height="6" />
+                    <line x1="9" y1="1" x2="9" y2="4" />
+                    <line x1="15" y1="1" x2="15" y2="4" />
+                    <line x1="9" y1="20" x2="9" y2="23" />
+                    <line x1="15" y1="20" x2="15" y2="23" />
+                    <line x1="20" y1="9" x2="23" y2="9" />
+                    <line x1="20" y1="15" x2="23" y2="15" />
+                    <line x1="1" y1="9" x2="4" y2="9" />
+                    <line x1="1" y1="15" x2="4" y2="15" />
+                </svg>
+                PC<span class="text-gradient">-Craft</span>
+            </a>
+            <div class="nav-links">
+                <a href="#" data-page="home" onclick="navigateTo('home');return false">Home</a>
+                <a href="#" data-page="prebuilts" onclick="navigateTo('prebuilts');return false">Pre-built PCs</a>
+                <a href="#" data-page="builder" class="builder-link" onclick="navigateTo('builder');return false">Custom
+                    Builder</a>
+                <a href="#" data-page="parts" onclick="navigateTo('parts');return false">Components</a>
+                <div class="nav-icons">
+                    <button class="nav-icon-btn" onclick="toggleWishlistSidebar()" title="Wishlist">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                        <span class="nav-badge wishlist-badge" id="wishlist-badge" style="display:none">0</span>
+                    </button>
+                    <button class="nav-icon-btn" onclick="toggleCart()" title="Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        <span class="nav-badge cart-badge" id="cart-badge" style="display:none">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="page-home" class="page">
+        <section class="hero">
+            <div class="hero-content container">
+                <h1 class="animate-in">Craft Your Ultimate <span class="text-gradient">Dream Machine</span></h1>
+                <p class="animate-in animate-delay-1">Whether you're building from scratch or looking for a ready-made
+                    powerhouse, PC-Craft has everything you need to ascend to the next level of computing.</p>
+                <div class="hero-buttons animate-in animate-delay-2">
+                    <button class="btn btn-primary" onclick="navigateTo('builder')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                            height="20">
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <rect x="9" y="9" width="6" height="6" />
+                        </svg>
+                        Start Custom Builder
+                    </button>
+                    <button class="btn btn-secondary" onclick="navigateTo('prebuilts')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"
+                            height="20">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        Shop Pre-builts
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="section container">
+            <div class="section-header">
+                <h2>Featured <span class="text-gradient">Pre-builts</span></h2>
+                <p>Hand-picked builds for every use case and budget</p>
+            </div>
+            <div class="grid grid-3" id="featured-grid"></div>
+        </section>
+    </div>
+
+
+    <div id="page-prebuilts" class="page hidden">
+        <div class="container section">
+            <div class="section-header" style="text-align:left">
+                <h1>Pre-built <span class="text-gradient">Showcase</span></h1>
+                <p>Premium systems ready to ship</p>
+            </div>
+            <div class="grid grid-3" id="prebuilts-grid"></div>
+        </div>
+    </div>
+
+
+    <div id="page-builder" class="page hidden">
+        <div class="container section">
+            <div class="builder-header">
+                <div>
+                    <h1>Custom <span class="text-gradient">PC Builder</span></h1>
+                    <p class="text-secondary">Select parts to build your custom rig. Real-time price tracking enabled.
+                    </p>
+                </div>
+                <div class="builder-total-card">
+                    <div class="label">Estimated Total</div>
+                    <div class="amount" id="builder-total">$0.00</div>
+                </div>
+            </div>
+            <div class="builder-layout">
+                <div>
+                    <div id="builder-slots"></div>
+
+                    <div class="recommendations">
+                        <h3>💡 Build <span class="text-gradient">Recommendations</span></h3>
+                        <div id="recommendations-list"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="builder-summary">
+                        <h3>Build Summary</h3>
+                        <hr class="summary-divider">
+                        <ul class="summary-list" id="summary-list"></ul>
+                        <hr class="summary-divider">
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <span class="text-gradient" id="builder-total-sidebar">$0.00</span>
+                        </div>
+                        <button class="btn btn-primary btn-full" onclick="addBuilderToCart()">Add Build to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="page-parts" class="page hidden">
+        <div class="container section">
+            <h1 style="margin-bottom:2rem">Components <span class="text-gradient">Catalog</span></h1>
+            <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+                <div class="search-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input type="text" placeholder="Search for parts..." oninput="onSearchInput(this.value)">
+                </div>
+            </div>
+            <div id="filter-tabs" class="filter-tabs"></div>
+            <div class="grid grid-4" id="parts-grid"></div>
+        </div>
+    </div>
+
+
+    <div class="modal-overlay" id="detail-modal" onclick="if(event.target===this)closeDetail()">
+        <div class="modal" id="modal-content"></div>
+    </div>
+
+
+    <div class="sidebar-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="sidebar" id="cart-sidebar">
+        <div class="sidebar-header">
+            <h3>🛒 Shopping Cart</h3>
+            <button class="btn-icon" onclick="toggleCart()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" width="20" height="20">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg></button>
+        </div>
+        <div class="sidebar-body" id="cart-body"></div>
+        <div class="sidebar-footer" id="cart-footer"></div>
+    </div>
+
+
+    <div class="sidebar-overlay" id="wishlist-overlay" onclick="toggleWishlistSidebar()"></div>
+    <div class="sidebar" id="wishlist-sidebar">
+        <div class="sidebar-header">
+            <h3>❤️ Wishlist</h3>
+            <button class="btn-icon" onclick="toggleWishlistSidebar()"><svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg></button>
+        </div>
+        <div class="sidebar-body" id="wishlist-body"></div>
+    </div>
+
+
+    <div class="toast-container" id="toast-container"></div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" onclick="navigateTo('home');return false">Home</a>
+                <a href="#" onclick="navigateTo('prebuilts');return false">Pre-builts</a>
+                <a href="#" onclick="navigateTo('builder');return false">Builder</a>
+                <a href="#" onclick="navigateTo('parts');return false">Components</a>
+            </div>
+            <p>© 2026 PC-Craft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
